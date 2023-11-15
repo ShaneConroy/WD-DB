@@ -1,0 +1,91 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #007700;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#player-section{
+    text-align: left;
+    font-size: 24px;
+    color: #000000;
+    position: absolute;
+    top: 5%;
+    border: 2px solid rgb(146, 100, 40);
+    background-color: rgb(225, 197, 137);
+    padding: 10px; 
+}
+
+#dealer-section {
+    text-align: right;
+    font-size: 24px;
+    color: #000000;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    border: 2px solid rgb(146, 100, 40);
+    background-color: rgb(225, 197, 137);
+    padding: 10px;
+}
+
+#player_card_section {
+    position: fixed;
+    top: 18%;
+    left: 5%;
+    max-width: 40%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#dealer_card_section {
+    position: absolute;
+    top: 18%;
+    right: 15%;
+}
+
+form {
+    display: inline;
+    margin-right: 10px;
+    border: 10px rgb(146, 100, 40);
+}
+
+form input[type="button"], form input[type="submit"], form button {
+    font-size: 24px;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: rgb(225, 197, 137);
+    cursor: pointer;
+}
+
+#player-total {
+    left: 150px;
+    position: absolute;
+    font-size: 20px;
+    top: 12%;
+    color: rgb(255, 255, 255);
+}
+
+#Bust-text {
+    position: absolute;
+    font-size: 50px;
+    bottom: 65px;
+    left: 35%;
+}
+
+#cards-amount{
+    position: absolute;
+    bottom: 55px;
+    left: 45%;
+}
+
+#dealerIf{
+    position: absolute;
+    bottom: 1000px;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!--
+    <p>{{ player_cards }}</p> 
+    <p>{{ player_total }}</p>
+    <hr>
+    <p>{{ dealer_cards }}</p> 
+    <p>{{ dealer_total }}</p>
+-->
+<h0 id="dealerIf">{{dealerReveal}}</h0>
+<h1 id="dealer-section">Dealer Cards</h1>
+    <p id = "dealer_card_section" >
+        {%if dealerReveal == 0%}
+        <img src="static/cards/{{ dealer_cards[0][-1][-1] }}"/>
+        <img src="static/cards/back.png"/>
+        {%endif%}
+
+        {%if dealerReveal == 1%}
+            {% for card in dealer_cards %}
+                <img src="static/cards/{{ card[-1][-1] }}"/>
+            {% endfor %}
+        {%endif%}
+    </p>
+
+
+<h2 id = "player-section">Player Cards</h2>
+    <p id="player_card_section">
+    {% for card in player_cards %}
+        <img src="static/cards/{{ card[-1][-1] }}"/>
+    {% endfor %}
+    </p>
+    <h3 id="player-total">Total for the player is: {{ player_total }}</h3>
+
+    <h4 id="Buttons">
+        <form action="/stand" method="post">
+            <input type="submit" value="Stand"/>
+        </form>
+        <form action="/hit" method="post">
+            <input type="submit" value="Hit"/>
+        </form>
+        <form action="/restart" method="post">
+            <input type="submit" value="Reset"/>
+        </form>
+    </h4>
+    
+    <h6 id = "Bust-text">{{ lost_text }}</h6>
+
+    <h5 id="cards-amount">The number of cards in the deck is: {{ number_of_cards }}.</h5>
+
+{% endblock %} 
